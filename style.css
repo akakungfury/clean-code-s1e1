@@ -13,11 +13,11 @@
   text-align: right;
 }
 
-.header .header-img {
+.header__img {
   width: 100%;
 }
 
-.header .more-info {
+.header__link {
   font-family: fantasy, cursive;
 }
 
@@ -35,13 +35,14 @@
   margin: 0 auto 0;
 }
 
-.task-input {
+.list-item__input-label,
+.text-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add-task__row-wrapper {
   display: flex;
 }
 
@@ -54,7 +55,8 @@
   list-style: none;
 }
 
-.input,
+.text-input,
+.checkbox-input,
 .button{
   outline: none;
 }
@@ -76,7 +78,7 @@
 /* Heading */
 
 .title,
-.label-input[for="new-task"] {
+.add-task__input-label {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -86,7 +88,7 @@
   text-transform: uppercase;
 }
 
-.input[type="text"] {
+.text-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -99,18 +101,18 @@
   color: #888;
 }
 
-.input[type="text"]:focus {
+.text-input:focus {
   color: #333;
 }
 
 /* New Task */
 
-.label-input[for="new-task"] {
+.add-task__input-label {
   display: block;
   margin: 0 0 20px;
 }
 
-.input#new-task {
+.text-input#new-task {
   width: 318px;
 }
 
@@ -130,49 +132,49 @@
   vertical-align: middle;
 }
 
-.list-item > .input[type="checkbox"] {
+.list-item > .checkbox-input {
   margin: 0 10px;
 }
 
-.list-item > .label-input {
+.list-item__input-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item >    .input[type="text"] {
+.list-item >    .text-input {
   width: 226px;
 }
 
-button.delete-task .delete-task-icon {
+.list-item__delete-task-btn .list-item__delete-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete-task .delete-task-icon:hover {
+.list-item__delete-task-btn .list-item__delete-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-.list#completed-tasks .label-input {
+.list--completed-tasks .list-item__input-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-.list .list-item .input[type=text] {
+.list .list-item .text-input {
   display: none;
 }
 
-.list .list-item.edit-mode .input[type=text] {
+.list .list-item--edit-mode .text-input {
   display: inline-block;
   width: 224px;
 }
 
-.list .list-item.edit-mode .label-input {
+.list .list-item--edit-mode .list-item__input-label {
   display: none;
 }
